@@ -1,21 +1,22 @@
 <?php 
 include("../config/database.php");
 
-$email = $_POST['email'];
+$fullname = $_POST['fullname'];
 $username = $_POST['username'];
+$email = $_POST['email'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-$query = "INSERT INTO users (email, username, password)
-          VALUES (:email, :username, :password)";
+$query = "INSERT INTO users (fullname, username, email, password)
+          VALUES (:fullname, :username, :email, :password)";
 
 $stmt = $pdo->prepare($query);
 
-$stmt->bindParam(":email", $email);
 $stmt->bindParam(":username", $username);
+$stmt->bindParam(":email", $email);
 $stmt->bindParam(":password", $password);
 
 $stmt->execute();       
 
-header("Location: ../../frontend/login/login.php");
+header("Location:../../frontend/login/login.php");
 exit();
 ?>
