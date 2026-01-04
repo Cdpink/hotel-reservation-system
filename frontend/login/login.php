@@ -9,7 +9,7 @@
 <body>
     <div>
     <form name="frmlogin" method="POST" action="../../backend/login/login.php">
-        <input type="text" name="username" required placeholder="username">
+        <input type="email" name="email" required  placeholder="Email">
         <input type="password" name="password" required placeholder="password">
         <span>
             <input type="checkbox" onclick="togglePassword()"> show password

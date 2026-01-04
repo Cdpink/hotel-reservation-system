@@ -2,12 +2,11 @@
 include("../config/database.php");
 
 $email = $_POST["email"];
-$username = $_POST["username"];
 $password = $_POST["password"];
 
-$query = "SELECT password FROM users WHERE username = :username";
+$query = "SELECT password FROM users WHERE email = :email";
 $stmt = $pdo->prepare($query);
-$stmt->bindParam(":username", $username);
+$stmt->bindParam(":email", $email);
 $stmt->execute();
 
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
