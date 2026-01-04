@@ -4,7 +4,7 @@ include("../config/database.php");
 $email = $_POST["email"];
 $password = $_POST["password"];
 
-$query = "SELECT password FROM users WHERE email = :email";
+$query = "SELECT password FROM guest WHERE email = :email";
 $stmt = $pdo->prepare($query);
 $stmt->bindParam(":email", $email);
 $stmt->execute();

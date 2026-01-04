@@ -16,6 +16,7 @@
         </span>
         <button type="submit">Login</button>
         <p>Do you have an account?<a href="../register/register.php">Sign Up</a></p>
+        <p>Do you have an account?<a href="../login/admin.php">admin</a></p>
     </form>
     </div>
 </body>
