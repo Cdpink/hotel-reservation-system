@@ -4,7 +4,7 @@
         <title></title>
     </head>
     <body>
-        <form name="frmRoomType" action="">
+        <form name="frmRoomType" method="POST" action="../../backend/admin room type/create-room-type.php">
             <input type="text" name="name" required placeholder="Room Class">
             <input type="number" name="price_per_night" required placeholder="Price Per Night">
             <input type="number" name="capacity" required placeholder="Capacity">
