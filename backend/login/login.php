@@ -9,11 +9,11 @@ $stmt = $pdo->prepare($query);
 $stmt->bindParam(":email", $email);
 $stmt->execute();
 
-$user = $stmt->fetch(PDO::FETCH_ASSOC);
+$guest = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if ($user) {
-    if (password_verify($password, $user["password"])) {
-        header("Location: ../../frontend/reservation/reservations.php");
+if ($guest) {
+    if (password_verify($password, $guest["password"])) {
+        header("Location: ../../frontend/guest/home.php");
         exit();
     } else {
         echo "Wrong password";

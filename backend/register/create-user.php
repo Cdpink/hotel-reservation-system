@@ -5,7 +5,7 @@ $fullname = $_POST['fullname'];
 $email = $_POST['email'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-$query = "INSERT INTO users (fullname, email, password)
+$query = "INSERT INTO guest (fullname, email, password)
           VALUES (:fullname, :email, :password)";
 
 $stmt = $pdo->prepare($query);
