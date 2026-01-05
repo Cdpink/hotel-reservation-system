@@ -19,6 +19,6 @@ $stmt->bindParam(":status", $status);
 
 $stmt->execute();
 
-header("location: ../../frontend/admin/room_type_management.php");
+header("location: ../../frontend/admin/room-type/room_type_management.php");
 exit();
 ?>
