@@ -8,7 +8,7 @@
 
 <body>
     <div>
-    <form name="frmlogin" method="POST" action="../../backend/login/login.php">
+    <form name="frmlogin" method="POST" action="../../backend/login/create-rec.php">
         <input type="email" name="email" required  placeholder="Email">
         <input type="password" name="password" required placeholder="password">
         <span>
@@ -16,7 +16,7 @@
         </span>
         <button type="submit">Login</button>
         <p>Do you have an account?<a href="../register/register.php">Sign Up</a></p>
-        <p>Do you have an account?<a href="../login/admin.php">admin</a></p>
+        <p>Admin? <a href="admin-login.php">Login here</a></p>
     </form>
     </div>
 </body>
